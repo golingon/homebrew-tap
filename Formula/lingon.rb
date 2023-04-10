@@ -9,12 +9,12 @@ class Lingon < Formula
 - terragen generates Go code for Terraform providers.
 "
   homepage "https://github.com/volvo-cars/lingon"
-  version "2023-04-08-cdc2f49"
+  version "2023-04-10-9bd105c"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/volvo-cars/lingon/releases/download/2023-04-08-cdc2f49/lingon_2023-04-08-cdc2f49_darwin_amd64.tar.gz"
-      sha256 "654fe13dbfdc242df3f3bfcfcd527aaa202fc4cefaae5b50919cf2caabf3431f"
+    if Hardware::CPU.arm?
+      url "https://github.com/volvo-cars/lingon/releases/download/2023-04-10-9bd105c/lingon_2023-04-10-9bd105c_darwin_arm64.tar.gz"
+      sha256 "8ac3401199a9ecf69d1abcb7f58d31b8eb6d2cf70909f7c9b7f8a18e6bfa982d"
 
       def install
         bin.install "explode"
@@ -22,9 +22,9 @@ class Lingon < Formula
         bin.install "terragen"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/volvo-cars/lingon/releases/download/2023-04-08-cdc2f49/lingon_2023-04-08-cdc2f49_darwin_arm64.tar.gz"
-      sha256 "5b30deab4e06fb390b15c22d4d817250e2fbd4f8a5897372a694f722c387bb17"
+    if Hardware::CPU.intel?
+      url "https://github.com/volvo-cars/lingon/releases/download/2023-04-10-9bd105c/lingon_2023-04-10-9bd105c_darwin_amd64.tar.gz"
+      sha256 "8f5a197e30cc3049d70db54d96a2a3e9355591672a0f4d36b23b787c92d252b5"
 
       def install
         bin.install "explode"
@@ -35,9 +35,9 @@ class Lingon < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/volvo-cars/lingon/releases/download/2023-04-08-cdc2f49/lingon_2023-04-08-cdc2f49_linux_amd64.tar.gz"
-      sha256 "11d8ed1cae8d54540c8c14db3d25824257154d967a8928f15c261ccfca7e775e"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/volvo-cars/lingon/releases/download/2023-04-10-9bd105c/lingon_2023-04-10-9bd105c_linux_arm64.tar.gz"
+      sha256 "267bd4f804d4ea20dd0fa4a62ddc0382831df25e3700d87059e842c2ba254093"
 
       def install
         bin.install "explode"
@@ -45,9 +45,9 @@ class Lingon < Formula
         bin.install "terragen"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/volvo-cars/lingon/releases/download/2023-04-08-cdc2f49/lingon_2023-04-08-cdc2f49_linux_arm64.tar.gz"
-      sha256 "4b8b493c5386bc0b4b10965ef2363ce6e2f37348f6a342b36c8b149b66c3eab9"
+    if Hardware::CPU.intel?
+      url "https://github.com/volvo-cars/lingon/releases/download/2023-04-10-9bd105c/lingon_2023-04-10-9bd105c_linux_amd64.tar.gz"
+      sha256 "ce26d1e98267add7a4a136039fec48a61f28b9aec70389a67920afddd7c8a801"
 
       def install
         bin.install "explode"
