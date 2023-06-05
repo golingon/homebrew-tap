@@ -9,12 +9,12 @@ class Lingon < Formula
 - terragen generates Go code for Terraform providers.
 "
   homepage "https://github.com/volvo-cars/lingon"
-  version "2023-05-22-dca6a6f"
+  version "2023-06-05-13bf097"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/volvo-cars/lingon/releases/download/2023-05-22-dca6a6f/lingon_2023-05-22-dca6a6f_darwin_arm64.tar.gz"
-      sha256 "c365073ddc18e09c0413f80054af686c708e10fcd6b704ccf689182708eee787"
+      url "https://github.com/volvo-cars/lingon/releases/download/2023-06-05-13bf097/lingon_2023-06-05-13bf097_darwin_arm64.tar.gz"
+      sha256 "fc90c43138235562ea838d6fb5b2481c06577ddaae8ee2e1b84f7a424bd8974d"
 
       def install
         bin.install "explode"
@@ -23,8 +23,8 @@ class Lingon < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/volvo-cars/lingon/releases/download/2023-05-22-dca6a6f/lingon_2023-05-22-dca6a6f_darwin_amd64.tar.gz"
-      sha256 "e609744b37ec181b0cb63d0b815ad3dcff4c57e3ebd9d4919b60f2677e39f11c"
+      url "https://github.com/volvo-cars/lingon/releases/download/2023-06-05-13bf097/lingon_2023-06-05-13bf097_darwin_amd64.tar.gz"
+      sha256 "2969d340649e418c360fbcc7db2a4b44d17feb6740b6de3cdbb4945bdb8e875a"
 
       def install
         bin.install "explode"
@@ -36,8 +36,8 @@ class Lingon < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/volvo-cars/lingon/releases/download/2023-05-22-dca6a6f/lingon_2023-05-22-dca6a6f_linux_arm64.tar.gz"
-      sha256 "4d3e547ba09ef60dfd1c304de193ca1c925c0a4043d311d4bcfa51ad667e34e5"
+      url "https://github.com/volvo-cars/lingon/releases/download/2023-06-05-13bf097/lingon_2023-06-05-13bf097_linux_arm64.tar.gz"
+      sha256 "aa8c6a8df56df3d422f2064be002d9dcef151b7dcb5a09c980794566bb8d8662"
 
       def install
         bin.install "explode"
@@ -46,8 +46,8 @@ class Lingon < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/volvo-cars/lingon/releases/download/2023-05-22-dca6a6f/lingon_2023-05-22-dca6a6f_linux_amd64.tar.gz"
-      sha256 "77ffdb9e7dc83b0d22769b1154fbbce7ee684f44951b1257cfc87a90cfb93d26"
+      url "https://github.com/volvo-cars/lingon/releases/download/2023-06-05-13bf097/lingon_2023-06-05-13bf097_linux_amd64.tar.gz"
+      sha256 "a60bc531c872cc7c2c667e42927f581d301ae5a71fe45b92df8f0fc0c5593703"
 
       def install
         bin.install "explode"
